@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Web3 from 'web3'
+import Navbarswitch from './Navbarswitch'
 
 import './App.css';
 import Navbar from './Navbar'
@@ -331,9 +332,10 @@ var myContract =  new web3.eth.Contract([
     return (
       <div>
         <Navbar account={this.state.account} />
-        <div className="container-fluid mt-5">
+        
+        <div className="container-fluid">
           <div className="row">
-            <main role="main" className="col-lg-12 d-flex">
+            <main >
               { this.state.loading
                 ? <div id="loader" className="text-center"><p className="text-center">Loading...</p></div>
                 : <Main
